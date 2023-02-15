@@ -1,0 +1,60 @@
+<div id="scrollTargetConverse" class="scroll-container">
+  <ul class="list-unstyled detailChatul">
+    <li class="d-flex justify-content-between col-sm-12 chatlist" *ngFor="let message of allmessages">
+      <div class="card pull-right detailChatliright" *ngIf="message.fromUser === 'Recruiter'">
+        <div class="card-header d-flex justify-content-between p-3 align-items-center">
+          <p class="fw-bold mb-0">{{message.fromUser}}</p>
+          <p class="text-muted small mb-0"><i class="far fa-clock"></i>{{message.sentOn | date: 'MM/dd/yyyy'}}</p>
+        </div>
+        <div class="card-body focuslist">
+          <p class="mb-0 roundCorner">{{message.message}}</p>
+        </div>
+      </div>
+      <div class="card pull-left detailChatlileft" *ngIf="message.fromUser !== 'Recruiter'">
+        <div class="card-header d-flex justify-content-between p-3 align-items-center">
+          <p class="fw-bold mb-0">{{message.fromUser}}</p>
+          <p class="text-muted small mb-0"><i class="far fa-clock"></i>{{message.sentOn | date: 'MM/dd/yyyy'}}</p>
+        </div>
+        <div class="card-body focuslist">
+          <p class="mb-0 roundCorner">{{message.message}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<form>
+  <div class="form-group search-container d-flex">
+    <input type="text" placeholder="Enter response..." class="form-control mr-2" [(ngModel)]="response" name="conversationResponse" />
+    <span class="input-group-text search_btn" (click)="submitResponse()"><i class="fas fa-paper-plane fa-xl"></i></span>
+    <!--<button type="button" class="fas fa-paper-plane" (click)="submitResponse(response)"></button>-->
+  </div>
+</form>
+
+
+
+<!--<ul class="list-unstyled detailChatul">
+  <li class="d-flex justify-content-between col-sm-12" *ngFor="let message of allmessages">
+    <ng-container *ngIf="message.fromUser === 'Recruiter'; else otherUser">
+      <div class="card pull-right detailChatliright">
+        <div class="card-header d-flex justify-content-between p-3 .detailChatlirightcard-header">
+          <p class="fw-bold mb-0">{{message.fromUser}}</p>
+          <p class="text-muted small mb-0"><i class="far fa-clock"></i>{{message.sentOn}}</p>
+        </div>
+        <div class="card-body focuslist">
+          <p class="mb-0 roundCorner">{{message.message}}</p>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #otherUser>
+      <div class="card pull-left detailChatlileft">
+        <div class="card-header d-flex justify-content-between p-3">
+          <p class="fw-bold mb-0">{{message.fromUser}}</p>
+          <p class="text-muted small mb-0"><i class="far fa-clock"></i>{{message.sentOn}}</p>
+        </div>
+        <div class="card-body focuslist">
+          <p class="mb-0 roundCorner">{{message.message}}</p>
+        </div>
+      </div>
+    </ng-template>
+  </li>
+</ul>-->

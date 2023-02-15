@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ConversationHeaderComponent } from './modules/Conversation/Components/conversation-header/conversation-header.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, ConversationHeaderComponent
       ],
     }).compileComponents();
   });

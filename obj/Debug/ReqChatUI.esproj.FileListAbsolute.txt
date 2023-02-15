@@ -1,0 +1,2 @@
+C:\Users\sivatejad\source\repos\ReqChatcassendra\ReqChatUI\obj\Debug\ReqChatUI.esproj.SuggestedBindingRedirects.cache
+C:\Users\sivatejad\source\repos\ReqChatcassendra\ReqChatUI\obj\Debug\ReqChatUI.esproj.CoreCompileInputs.cache

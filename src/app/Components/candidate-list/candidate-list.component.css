@@ -1,0 +1,87 @@
+.search-container {
+  position: relative;
+}
+mat-form-field {
+  width: 100%;
+  padding:0px !important;
+  
+}
+input {
+  width: 100%;
+}
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-30%) !important;
+  color: gray;
+}
+.candidList {
+  overflow: auto;
+  height: 70%;
+  min-height: 360px;
+  margin-top: 8px;
+  padding: 0rem !important;
+  margin-bottom: 5%;
+  /*max-width:500px !important;*/
+}
+
+#scrollTarget::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  
+}
+
+#scrollTarget::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+  #scrollTarget::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+img {
+  width: 30px;
+  height: 30px;
+}
+li {
+  list-style: none;
+  width:100% !important;
+  margin:0px !important;
+  padding:0rem !important;
+  border-bottom: 1px solid #ddd;
+  list-style: none; /* Remove the default bullet points */
+  padding: 1px;
+  padding-bottom:5px !important;/* Add some padding to each list item */
+  border-bottom: 1px solid #ddd; /* Add a border at the bottom of each item */
+  border-radius: 1px; /* Add rounded corners to each list item */
+  background-color: #fff; /* Add a white background color */
+}
+  li .card-header {
+    height: 35px !important;
+  }
+
+  li .card-body {
+    height: 40px !important;
+  }
+#scrollTarget {
+
+  max-height: 600px; /* Set a max height for the container */
+  overflow-y: auto; /* Enable auto-scrolling when content overflows */
+  margin-bottom: 20px !important;
+}
+
+
+
+img {
+  width: 25px;
+  height:20px;/* Increase the size of the avatar image */
+}
+
+.fw-bold {
+  font-weight: bold; /* Bolden the font for the name */
+}
+
+.text-muted {
+  color: #777; /* Lighten the color of the text */
+}

@@ -1,0 +1,47 @@
+.detailChatliright {
+  width: 70% !important;
+  margin-left: 30%;
+  margin-right:2%;
+  float: right !important;
+}
+.detailChatlileft {
+  width: 70% !important;
+  margin-left: 2%;
+  float: left !important;
+}
+.chatlist {
+  padding-bottom: 5px !important;
+}
+#scrollTargetConverse::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+.d-flex {
+  display: flex;
+}
+
+
+#scrollTargetConverse::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+  #scrollTargetConverse::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+#scrollTargetConverse {
+  max-height: 400px; /* Set a max height for the container */
+  overflow-y: auto; /* Enable auto-scrolling when content overflows */
+  margin-bottom: 20px !important;
+}
+li .card-header {
+  height: 20px !important;
+  vertical-align:central !important;
+}
+
+li .card-body {
+  min-height: 30px !important;
+}
+.search-container text{
+    width:90% !important;
+}

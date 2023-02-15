@@ -1,0 +1,39 @@
+
+  
+  <!--<mat-form-field class="search-container">
+    <input type="text" placeholder="Search..." name="" class="form-control search" [(ngModel)]="searchText">
+    <mat-icon class="search-icon">search</mat-icon>
+  </mat-form-field>-->
+<div class="form-group search-container">
+  <input type="text" placeholder="Search..." class="form-control search" [(ngModel)]="_searchText" (keyup.enter)="filterCandidate()">
+  <i class="fas fa-search search-icon"></i>
+</div>
+
+<div id="scrollTarget">
+  <ul class="candidList">
+    <li *ngFor="let candidate of candidates">
+
+      <div class="card" (click)="selectConversation(candidate.conversation.conversationId)">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-8.webp" alt="avatar"
+                 class="rounded-circle d-flex align-self-center me-3 shadow-1-strong">
+            <div class="ml-2">
+              <p class="fw-bold mb-0">{{candidate.lastName}}</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="small text-muted">{{candidate.conversation.sentOn|exchangeDate}}</p>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <p class="small text-muted mb-1">{{candidate.conversation.message}}</p>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+  
+</div>
+

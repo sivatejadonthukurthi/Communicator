@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center p-3"
+       style="width:100% !important;height:50px;top:0;">
+    <div class="d-flex flex-row align-items-center">
+      <i class="far fa-arrow-left  fa-xl converseheader" (click)="getCandidates()"></i>
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-15.webp" alt="avatar"
+           class="rounded-circle d-flex align-self-center me-3 shadow-1-strong " width="20">
+      <h5 class="mb-0 converseheader"> sivateja</h5>
+
+    </div>
+    <div class="d-flex flex-row align-items-center">
+      <i class="fa-solid fa-angle-left fa-xl" *ngIf="resultLeft > 0 && searchclicked" (click)="searchPreviousItem()"></i>
+      <input type="text" placeholder="Search..." *ngIf="searchclicked" class="form-control search searchtext" [(ngModel)]="focusSearch">
+      <i class="fa-solid fa-angle-right fa-xl" *ngIf="resultRight > 0 && searchclicked" (click)="searchNextItem()"></i>
+      <i class="fa-solid fa-circle-xmark fa-xl converseheader" (click)="clearSearch()" *ngIf="searchItemCount > 0"></i>
+      <i class="fa-solid fa-magnifying-glass fa-xl converseheader" (click)="focusConversation()" *ngIf="searchItemCount == 0"></i>
+      <i class="fa-solid fa-bell fa-xl converseheader"></i>
+      <i class="fa-solid fa-envelope fa-xl converseheader"></i>
+      <i class="fa-solid fa-user fa-xl converseheader" *ngIf="isMobile"></i>
+    </div>
+    <!--<nav class="navbar navbar-light bg-light" [ngClass]="{'d-flex': true, 'justify-content-between': true}">
+    <ng-container *ngIf="searchActive">
+      <a class="nav-link" href="#">
+        <i class="fas fa-user"></i>
+      </a>
+      <a class="nav-link" href="#">
+        <i class="fas fa-bell"></i>
+      </a>
+      <a class="nav-link" href="#" (click)="searchActive = !searchActive">
+        <i class="fas fa-search"></i>
+      </a>
+      <a class="nav-link" href="#">
+        <i class="fas fa-envelope"></i>
+      </a>
+      </ng-container>
+      <ng-container *ngIf="searchActive">
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="searchTerm" placeholder="Search">
+        <a class="nav-link" href="#" (click)="searchActive = false">
+          <i class="fas fa-times"></i>
+        </a>
+        <a class="nav-link" href="#" (click)="searchPreviousItem()">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="nav-link" href="#" (click)="searchNextItem()">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </ng-container>
+  </nav>-->
+  </div>
+
+</div>
+
+
